@@ -1,0 +1,13 @@
+﻿<xapCache source="C:\Users\user\Documents\GitHub\boothleadsV1.0\Bin\Debug\BoothLeads.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="2/8/2013 12:51:38 AM">
+  <file source="C:\Users\user\Documents\GitHub\boothleadsV1.0\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="1/24/2013 3:56:52 AM" />
+  <file source="C:\Users\user\Documents\GitHub\boothleadsV1.0\Background.png" archivePath="Background.png" lastWriteTime="10/20/2012 3:12:52 AM" />
+  <file source="C:\Users\user\Documents\GitHub\boothleadsV1.0\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="2/2/2013 10:57:00 PM" />
+  <file source="C:\Users\user\Documents\GitHub\boothleadsV1.0\obj\Debug\BoothLeads.dll" archivePath="BoothLeads.dll" lastWriteTime="2/8/2013 12:51:37 AM" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Advertising for Phone\Libraries\Microsoft.Advertising.Mobile.dll" archivePath="Microsoft.Advertising.Mobile.dll" lastWriteTime="11/1/2011 1:51:14 PM" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Advertising for Phone\Libraries\Microsoft.Advertising.Mobile.UI.dll" archivePath="Microsoft.Advertising.Mobile.UI.dll" lastWriteTime="11/1/2011 1:51:16 PM" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="3/19/2012 4:29:06 PM" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.Maps.dll" archivePath="Microsoft.Phone.Controls.Maps.dll" lastWriteTime="9/15/2011 3:36:26 PM" />
+  <file source="C:\Users\user\Documents\GitHub\boothleadsV1.0\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="11/2/2010 3:36:16 PM" />
+  <file source="C:\Users\user\Documents\GitHub\boothleadsV1.0\Bin\Debug\Silverlight_ZXing_Core.dll" archivePath="Silverlight_ZXing_Core.dll" lastWriteTime="7/21/2011 5:59:18 PM" />
+  <file source="C:\Users\user\Documents\GitHub\boothleadsV1.0\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2/8/2013 12:41:45 AM" />
+</xapCache>

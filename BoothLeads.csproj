@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F71DE70D-AEBD-464D-9ED6-726B14EE1D32}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BoothLeads</RootNamespace>
+    <AssemblyName>BoothLeads</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>BoothLeads.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>BoothLeads.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Advertising.Mobile, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.Advertising.Mobile.UI, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.Devices.Sensors" />
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e" />
+    <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>C:\Users\user\Downloads\GridViewImageWP7\GridViewImageWP7\GridViewImageWP7\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Silverlight_ZXing_Core">
+      <HintPath>..\..\ScannerDemo\lib\Silverlight_ZXing_Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Device" />
+    <Reference Include="System.Servicemodel" />
+    <Reference Include="System.Servicemodel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GoogleGeometry.cs" />
+    <Compile Include="GoogleMapsTileSourceBase.cs" />
+    <Compile Include="Usercontrols\blHeaderMenuItems.xaml.cs">
+      <DependentUpon>blHeaderMenuItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="blQRCodeScanner.xaml.cs">
+      <DependentUpon>blQRCodeScanner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BlSyncLeads.xaml.cs">
+      <DependentUpon>BlSyncLeads.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BlVerifyLead.xaml.cs">
+      <DependentUpon>BlVerifyLead.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BoothLeadGlobalAccess.cs" />
+    <Compile Include="BoothLeads.xaml.cs">
+      <DependentUpon>BoothLeads.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\blLiveMultipleEvents.xaml.cs">
+      <DependentUpon>blLiveMultipleEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\blScanMenu.xaml.cs">
+      <DependentUpon>blScanMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\boothLeadsHeader.xaml.cs">
+      <DependentUpon>boothLeadsHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceClient\DataContracts\BLDataready.cs" />
+    <Compile Include="ServiceClient\DataContracts\BLSFEXHIBITORS.cs" />
+    <Compile Include="ServiceClient\DataContracts\LeadDetails.cs" />
+    <Compile Include="ServiceClient\SalesForceServURL.cs" />
+    <Compile Include="ServiceClient\DataContracts\EventDetails.cs" />
+    <Compile Include="ServiceClient\DataContracts\EventSchedule.cs" />
+    <Compile Include="ServiceClient\DataContracts\SFLoginResponse.cs" />
+    <Compile Include="ServiceClient\DataContracts\SFLoginRequest.cs" />
+    <Compile Include="ServiceClient\ServiceClientBase.cs" />
+    <Compile Include="ServiceClient\DataContracts\UsersDetails.cs" />
+    <Compile Include="UserProfile.xaml.cs">
+      <DependentUpon>UserProfile.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Usercontrols\blHeaderMenuItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="blQRCodeScanner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlSyncLeads.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlVerifyLead.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BoothLeads.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Usercontrols\blLiveMultipleEvents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Usercontrols\blScanMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Usercontrols\boothLeadsHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BoothLeads.sqlite" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\248x58.png" />
+    <Resource Include="Images\290x481.png" />
+    <Resource Include="Images\30x30-non.png" />
+    <Resource Include="Images\30x30.png" />
+    <Resource Include="Images\360x480.png" />
+    <Resource Include="Images\460x82.png" />
+    <Resource Include="Images\460x821.png" />
+    <Resource Include="Images\480x360-H.png" />
+    <Resource Include="Images\480x360-H1.png" />
+    <Resource Include="Images\50x50.png" />
+    <Resource Include="Images\550x70.png" />
+    <Resource Include="Images\550x701.png" />
+    <Resource Include="Images\640x480-H.png" />
+    <Resource Include="Images\640x480-H1.png" />
+    <Resource Include="Images\640x480-H2.png" />
+    <Resource Include="Images\640x480-N.png" />
+    <Resource Include="Images\640x480-N1.png" />
+    <Resource Include="Images\640x480-N2.png" />
+    <Resource Include="Images\cancel.png" />
+    <Resource Include="Images\qrcode.png" />
+    <Resource Include="Images\save.png" />
+    <Resource Include="Images\scan-frame.png" />
+    <Resource Include="Images\scan_another.png" />
+    <Resource Include="Images\view_details.png" />
+    <Resource Include="ApplicationIcon.png" />
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bin\Debug\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

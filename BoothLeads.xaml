@@ -1,0 +1,88 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="BoothLeads.BoothLeads"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0,0,0,0"></StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel"  Background="#F0F1EB" Grid.RowSpan="2" Margin="0,60,0,0" Loaded="ContentPanel_Loaded">
+            <Grid x:Name="grdList" Background="#F0F1EB"  Margin="0,65,0,0" Grid.RowSpan="2">
+                <ListBox Name="lstView" ItemsSource="{Binding}"  SelectionChanged="lstView_SelectionChanged" >
+                    <ListBox.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="80" Width="100" Source="{Binding ImageSource}"></Image>
+                                <StackPanel  Orientation="Vertical" Name="imageContentPanel">
+                                    <TextBlock FontSize="24" Foreground="Olive" Text="{Binding LeadName}"></TextBlock>
+                                    <TextBlock FontSize="22" Foreground="Black" Text="{Binding CompanyName}"></TextBlock>
+                                    <TextBlock Text="{Binding Barcodeid}" Visibility="Collapsed" />
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Height="30" Width="35" Source="{Binding Rating1}"></Image>
+                                        <Image Height="30" Width="35" Source="{Binding Rating2}"></Image>
+                                        <Image Height="30" Width="35" Source="{Binding Rating3}"></Image>
+                                        <Image Height="30" Width="35" Source="{Binding Rating4}"></Image>
+                                        <Image Height="30" Width="35" Source="{Binding Rating5}"></Image>
+                                    </StackPanel>
+
+                                </StackPanel>
+                                <!--<StackPanel Margin="-320,98,0,0" Orientation="Horizontal">
+                                    <toolkit:Separator  Background="Gray" Width="520" />
+                                </StackPanel>-->
+                            </StackPanel>
+                        </DataTemplate>
+
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                
+            </Grid>
+
+        </Grid>
+        <Grid Height="67" Margin="0,65,2,637" Name="grdFilterCommand" Grid.RowSpan="2">
+            <Button Content="Company" Height="62" HorizontalAlignment="Left" Margin="-9,-5,0,0" Name="btnCompany" VerticalAlignment="Top" Width="145" Click="btnCompany_Click" FontSize="18" HorizontalContentAlignment="Left" BorderBrush="Transparent">
+                <Button.Background>
+                    <ImageBrush x:Name="imgCompanyAfter" ImageSource="/BoothLeads;component/Images/btnBeforeClick.png" />
+                </Button.Background>
+            </Button>
+            <Button Content="Name" Height="62" HorizontalAlignment="Left" Margin="108,-5,0,0" Name="btnName" VerticalAlignment="Top" Width="145" Click="btnName_Click" FontSize="18" HorizontalContentAlignment="Center" BorderBrush="Transparent">
+                <Button.Background>
+                    <ImageBrush ImageSource="/BoothLeads;component/Images/btnBeforeClick.png" />
+                </Button.Background>
+            </Button>
+            <Button Content="Date" Height="62" HorizontalAlignment="Left" Margin="227,-5,0,0" Name="btnDate" VerticalAlignment="Top" Width="145" Click="btnDate_Click" FontSize="18" HorizontalContentAlignment="Center" BorderBrush="Transparent">
+                <Button.Background>
+                    <ImageBrush ImageSource="/BoothLeads;component/Images/btnBeforeClick.png" />
+                </Button.Background>
+            </Button>
+            <Button Content="Rating" Height="62" HorizontalAlignment="Left" Margin="345,-5,0,0" Name="btnRating" VerticalAlignment="Top" Width="145" Click="btnRating_Click" FontSize="18" HorizontalContentAlignment="Center" BorderBrush="Transparent">
+                <Button.Background>
+                    <ImageBrush ImageSource="/BoothLeads;component/Images/btnBeforeClick.png" />
+                </Button.Background>
+            </Button>
+        </Grid>
+    </Grid>
+
+
+</phone:PhoneApplicationPage>
